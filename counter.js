@@ -1,4 +1,6 @@
+// COUNTER APP
 let counter = 0;
+
 function count() {
 	counter = counter + 1;
 	document.querySelector('h1').innerHTML = counter;
