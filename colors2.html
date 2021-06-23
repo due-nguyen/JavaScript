@@ -8,7 +8,7 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				document.querySelectorAll('button').forEach(function (button) {
-					button.onclick = function () {
+					button.onclick = () => {
 						document.querySelector('#hi').style.color = button.dataset.whatever; //"button.id" is fine too*.
 					};
 				});
