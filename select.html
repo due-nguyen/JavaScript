@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Select Drop Down</title>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				let slc = document.querySelector('select');
+				// ONCHANGE property (which NOT supports ES6):
+				slc.onchange = function () {
+					document.getElementById('print').style.color = this.value;
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="print" style="color: #41eae2">Print Solutions</h1>
+		<select autofocus>
+			<!--Firefox DOES NOT support autofocus-->
+			<option value="#41eae2">C</option>
+			<option value="#d419e5">M</option>
+			<option value="#fcfc2a">Y</option>
+			<option value="#282828">K</option>
+		</select>
+	</body>
+</html>
