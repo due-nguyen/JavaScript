@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Colors2</title>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('button').forEach(function (button) {
+					button.onclick = function () {
+						document.querySelector('#hi').style.color = button.dataset.whatever; //"button.id" is fine too*.
+					};
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1 id="hi">Hi!</h1>
+
+		<button data-whatever="#e52968">Đỏ</button>
+		<!--Using id="" is fine too*-->
+		<button data-whatever="#35e093">Xanh Lá</button>
+		<!--Using id="" is fine too*-->
+		<button data-whatever="#3585e0">Xanh Lam</button>
+		<!--Using id="" is fine too*-->
+	</body>
+</html>

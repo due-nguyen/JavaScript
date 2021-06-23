@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Colors</title>
+		<script>
+			// ES6 Syntax:
+			document.addEventListener('DOMContentLoaded', () => {
+				// Red
+				let redBtn = document.querySelector('#red');
+
+				redBtn.onclick = () => {
+					document.querySelector('#hello').style.color = '#FF0000';
+				};
+				// Green
+				let greenBtn = document.getElementById('green');
+
+				greenBtn.onclick = () => {
+					document.getElementById('hello').style.color = 'springgreen';
+				};
+				// Blue
+				const blueBtn = document.getElementById('blue');
+
+				blueBtn.onclick = () => {
+					document.getElementById('hello').style.backgroundColor = 'aqua';
+				};
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1 id="hello">Hello!</h1>
+
+		<button id="red">Red</button>
+		<button id="green">Green</button>
+		<button id="blue">Blue</button>
+	</body>
+</html>
