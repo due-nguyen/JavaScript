@@ -8,7 +8,7 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
 				let slc = document.querySelector('select');
-				// ONCHANGE property (which NOT supports ES6):
+				// Arrow Function seems not compatible with "this.":
 				slc.onchange = function () {
 					document.getElementById('print').style.color = this.value;
 				};

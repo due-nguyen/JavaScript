@@ -8,14 +8,15 @@
 		<script>
 			// Phân tán ra từ lecture (Color2.html) để dễ "tiêu hóa" hơn:
 			document.addEventListener('DOMContentLoaded', function () {
-				let btn = document.querySelectorAll('button'); // array generated
-				btn.forEach(button);
-
-				function button(dataColor) {
-					dataColor.onclick = function () {
+				// Thiết lập onclick trước tiên:
+				function button(abc) {
+					abc.onclick = function () {
 						document.querySelector('#hi').style.color = this.dataset.color;
 					};
 				}
+
+				let btn = document.querySelectorAll('button'); // array generated
+				btn.forEach(button);
 			});
 		</script>
 	</head>
