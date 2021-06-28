@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Select Drop Down</title>
+		<link rel="shortcut icon" href="#" />
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				// Step 1 - Make Handler (Bộ Điều Khiển):
+				// Okay good, at what part do you want to change the color? This case "The print ID"
+				function changeColor() {
+					let changes = document.querySelector('#print');
+					changes.style.color = this.value;
+				}
+
+				// Step 2 - Make Listener:
+				// Great! Next up, which part do you want to assign as the trigger? "The Select Element"
+				let trigger = document.querySelector('select');
+				trigger.addEventListener('change', changeColor); // NOT "onchange"
+			}); // DOM ends
+		</script>
+	</head>
+	<body>
+		<h1 id="print" style="color: #41eae2">Print Solutions</h1>
+		<select autofocus>
+			<!--Firefox DOES NOT support autofocus-->
+			<option value="#41eae2">C</option>
+			<option value="#d419e5">M</option>
+			<option value="#fcfc2a">Y</option>
+			<option value="#282828">K</option>
+		</select>
+	</body>
+</html>

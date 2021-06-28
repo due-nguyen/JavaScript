@@ -5,10 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Select Drop Down</title>
+		<link rel="shortcut icon" href="#" />
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
 				let slc = document.querySelector('select');
-				// Arrow Function seems not compatible with "this.":
+
 				slc.onchange = function () {
 					document.getElementById('print').style.color = this.value;
 				};
@@ -17,8 +18,9 @@
 	</head>
 	<body>
 		<h1 id="print" style="color: #41eae2">Print Solutions</h1>
+
 		<select autofocus>
-			<!--Firefox DOES NOT support autofocus-->
+			<!--Note that the Firefox DOES NOT support autofocus-->
 			<option value="#41eae2">C</option>
 			<option value="#d419e5">M</option>
 			<option value="#fcfc2a">Y</option>
